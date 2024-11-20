@@ -605,8 +605,6 @@ header a:hover::before {
 }
 
 .sec7__content {
-  align-items: center;
-  height: 80rem;
 }
 
 .sec7__content h3 {
@@ -617,6 +615,39 @@ header a:hover::before {
   text-align: center;
 }
 
+.sec7__content .container {
+  display: flex;
+  margin: 6rem auto;
+}
+
+.sec7__content .container .reasons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+}
+
+.sec7__content .container img {
+  width: 5.1rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.sec7__content .container .items-container {
+  display: flex;
+  font-size: 1.8rem;  
+}
+
+.sec7__content .container .items-container .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 1.5rem 0 0 2rem;
+}
+
+.sec7__content .container .items-container .details .header{
+  font-weight: 700;
+}
 
 .sec8 {
   margin: 0 auto;
