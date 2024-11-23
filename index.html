@@ -16,13 +16,16 @@
     <header>
       <div class="company_name">
         <img src="./images/Logo.png" alt="Logo" />
-        <span
-          >TOPTRADE<br />
-          OFFSHORING<br />SOLUTIONS</span
-        >
+        <span>TOPTRADE<br />OFFSHORING<br />SOLUTIONS</span>
       </div>
 
-      <ul>
+      <!-- Hamburger Menu Icon -->
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+
+      <!-- Navigation Menu -->
+      <ul class="nav-menu">
         <li><a href="#">Updates</a></li>
         <li><a href="#">Career</a></li>
         <button class="button">Contact Us</button>
@@ -30,13 +33,12 @@
     </header>
 
     <main>
-      <section class="showcase">
+      <!-- <section class="showcase">
         <div class="container">
           <div class="showcase__content">
             <div class="showcase__content__left">
               <h2 class="showcase__content__left__description">
-                Welcome to <br />
-                TopTrade<br />
+                Welcome to TopTrade<br />
                 Offshoring <br />
                 Solutions!<br />
               </h2>
@@ -47,7 +49,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- <section class="sec2">
         <hr />
@@ -478,10 +480,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
 
-    <footer>
+    <!-- <footer>
       <div class="footer__content">
         <h5>Contact Us</h5>
         <div class="footer-container">
@@ -518,4 +520,9 @@
       </div>
     </footer> -->
   </body>
+  <script>
+    document.querySelector(".menu-toggle").addEventListener("click", () => {
+      document.querySelector(".nav-menu").classList.toggle("active");
+    });
+  </script>
 </html>

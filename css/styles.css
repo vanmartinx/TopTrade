@@ -76,8 +76,6 @@ h6 {
   isolation: isolate;
 }
 
-
-
 .container {
   max-width: 108rem;
   padding: 0 4rem;
@@ -106,12 +104,15 @@ header .company_name {
   align-items: center;
   gap: 2rem;
 }
+
 header ul {
   display: flex;
   justify-content: center;
   list-style: none;
   gap: 5rem;
+  transition: max-height 0.3s ease;
 }
+
 header ul li {
   font-style: normal;
   cursor: pointer;
@@ -119,20 +120,15 @@ header ul li {
   display: flex;
   align-items: center;
 }
-header img {
-  height: 8.7rem;
-  width: 8.7rem;
-}
 
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: aliceblue;
+header img {
+  width: 8.7rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .button {
-  background-color: white; /* Green */
+  background-color: white;
   border: 2px solid #2aa0a4;
   color: black;
   padding: 16px 32px;
@@ -145,6 +141,7 @@ header img {
   cursor: pointer;
   border-radius: 10rem;
 }
+
 .button:hover {
   background-color: #2aa0a4;
   color: white;
@@ -177,6 +174,54 @@ header a:hover::before {
   transform: scaleX(1);
 }
 
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    font-size: 1.4rem;
+    margin: 1rem;
+  }
+
+  header .company_name {
+    line-height: 1.3rem;
+  }
+
+  .button {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+
+  /* Hide navigation menu by default */
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    max-height: 0;
+    overflow: hidden;
+    gap: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Show menu when active */
+  .nav-menu.active {
+    max-height: 30rem; /* Adjust as needed */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header img {
+    width: 6rem;
+  }
+}
+
 .showcase {
   padding: 13rem;
   margin: 0 auto;
@@ -189,7 +234,6 @@ header a:hover::before {
 
 .showcase__content__left__description {
   font-size: 6rem;
-  color: var(--color3);
   line-height: 6rem;
   letter-spacing: 0.5rem;
   font-weight: 700;
@@ -207,6 +251,56 @@ header a:hover::before {
   height: auto;
   max-width: 100%;
 }
+@media only screen and (max-width: 1080px) {
+  .showcase {
+    padding: 10rem;
+    margin: 0 auto;
+  }
+  .showcase__content__left__description {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .showcase {
+    padding: 5rem;
+    margin: 0 auto;
+  }
+
+  .showcase__content__left__description {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+
+  .showcase__content__left span {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .showcase__content__right img {
+    width: 25rem;
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 455px) {
+  .showcase__content__right img {
+    display: none;
+  }
+  .showcase__content__left__description {
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .showcase__content__left {
+    text-align: center;
+    line-height:1.5rem;
+  }
+
+
+}
+
 /* @media only screen and (max-width: 768px) {
   .showcase {
     padding: 3rem 0;
@@ -535,7 +629,6 @@ header a:hover::before {
   padding: 3rem;
   border-radius: 2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .sec5__content .grid-container p {
@@ -554,7 +647,6 @@ header a:hover::before {
   margin: 0 auto;
   align-items: center;
   padding: 0 12rem;
-  
 }
 
 .sec6__content {
@@ -570,7 +662,6 @@ header a:hover::before {
   text-align: center;
 }
 
-
 .sec6__content h5 {
   padding-top: 3rem;
   font-size: 4rem;
@@ -585,7 +676,7 @@ header a:hover::before {
   letter-spacing: 0.2rem;
 }
 
-.sec6__content .grid-container{
+.sec6__content .grid-container {
   display: grid;
   grid-template-columns: auto auto;
   max-width: 100rem;
@@ -710,7 +801,6 @@ header a:hover::before {
 .sec9 {
   margin: 0 auto;
   align-items: center;
-  
 }
 
 .sec9__content {
@@ -718,7 +808,6 @@ header a:hover::before {
   height: 60rem;
   padding: 2rem;
 }
-
 
 .sec9__content h5 {
   padding-top: 3rem;
@@ -735,7 +824,7 @@ header a:hover::before {
   line-height: 5rem;
 }
 
-.sec9__content .grid-container{
+.sec9__content .grid-container {
   display: grid;
   grid-template-columns: auto auto;
   max-width: 100rem;
@@ -743,8 +832,6 @@ header a:hover::before {
   justify-content: center;
   gap: 4rem;
 }
-
-
 
 .sec9__content .grid-container .grid-item .box {
   width: 50rem;
@@ -763,10 +850,10 @@ header a:hover::before {
   scale: 110%;
 }
 
-.sec9__content .grid-container .grid-item .read-more{
+.sec9__content .grid-container .grid-item .read-more {
   font-size: 2.4rem;
   font-weight: 600;
-  letter-spacing: 0.2rem; 
+  letter-spacing: 0.2rem;
 }
 
 .sec9__content .grid-container .grid-item .read-more a {
@@ -782,19 +869,18 @@ header a:hover::before {
   gap: 1rem;
 }
 
-.sec9__content .grid-container .grid-item .read-more  img{
+.sec9__content .grid-container .grid-item .read-more img {
   width: 5rem;
   max-width: 100%;
   height: auto;
 }
 
-footer{
+footer {
   margin: 0 auto;
   align-items: center;
   background-color: #2aa0a4;
   color: white;
 }
-
 
 .footer__content {
   align-items: center;
@@ -825,7 +911,7 @@ footer{
 }
 
 .footer__content button:hover {
-  background-color: white;  
+  background-color: white;
   color: black;
 }
 
@@ -843,8 +929,7 @@ footer{
   border-radius: 1rem;
 }
 
-
-.footer__content .footer-container{
+.footer__content .footer-container {
   display: flex;
   flex-direction: row;
   max-width: 100rem;
@@ -859,27 +944,27 @@ footer{
   border: 0;
 }
 
-.footer__content .footer-container .form-items{
+.footer__content .footer-container .form-items {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.footer__content .address{
+.footer__content .address {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
   width: 40rem;
 }
 
-.footer__content .address img{
+.footer__content .address img {
   width: 3.2rem;
   max-width: 100%;
   height: auto;
   margin-right: 1rem;
 }
 
-.footer__content .contact{
+.footer__content .contact {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -888,17 +973,17 @@ footer{
   gap: 2rem;
 }
 
-.footer__content .contact .email{
+.footer__content .contact .email {
   display: flex;
   align-items: center;
 }
 
-.footer__content .contact .phone{
+.footer__content .contact .phone {
   display: flex;
   align-items: center;
 }
 
-.footer__content .contact img{
+.footer__content .contact img {
   width: 3.2rem;
   max-width: 100%;
   height: auto;
