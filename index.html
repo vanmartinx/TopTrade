@@ -17,23 +17,36 @@
       <div class="company_name">
         <img src="./images/Logo.png" alt="Logo" />
         <span>TOPTRADE<br />OFFSHORING<br />SOLUTIONS</span>
-      </div>
+      </div> 
 
-      <!-- Hamburger Menu Icon -->
-      <button class="menu-toggle" aria-label="Toggle navigation">
-        &#9776;
-      </button>
-
-      <!-- Navigation Menu -->
-      <ul class="nav-menu">
+      <!-- Desktop Navigation Menu -->
+     <ul class="nav-menu">
         <li><a href="#">Updates</a></li>
         <li><a href="#">Career</a></li>
         <button class="button">Contact Us</button>
-      </ul>
+      </ul> 
+
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <button
+          class="menu-toggle"
+          onclick="myFunction()"
+          aria-label="Toggle navigation"
+        >
+          &#9776;
+        </button>
+      </div>
     </header>
 
     <main>
-      <!-- <section class="showcase">
+      <div class="mobile-nav-menu" id="myLinks">
+        <ul class="nav-menu">
+          <li><a href="#">Updates</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">Contact Us</a></button>
+        </ul>
+      </div>
+      <section class="showcase">
         <div class="container">
           <div class="showcase__content">
             <div class="showcase__content__left">
@@ -49,10 +62,10 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="sec2">
-        <hr />
+      <section class="sec2">
+        <hr id="horizontal-rule" />
         <div class="container">
           <div class="sec2__content">
             <div class="left"><img src="./images/1.png" alt="Services" /></div>
@@ -141,11 +154,11 @@
           </div>
 
           <button class="sec3__content">
-            <img src="./images/phone_call.png" />Book a Discovery Call Now!
+            <img src="./images/phone_call.png"/>Book a Discovery Call Now!
           </button>
         </div>
       </section>
-
+<!-- 
       <section class="sec4">
         <hr />
         <div class="sec4__content">
@@ -521,8 +534,13 @@
     </footer> -->
   </body>
   <script>
-    document.querySelector(".menu-toggle").addEventListener("click", () => {
-      document.querySelector(".nav-menu").classList.toggle("active");
-    });
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
   </script>
 </html>
