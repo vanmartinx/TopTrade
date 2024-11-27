@@ -801,7 +801,7 @@ header .topnav {
 
 @media (min-width: 1024px) {
   .sec4__content {
-    height: 80rem;
+    height: 88rem;
   }
 }
 
@@ -1023,97 +1023,166 @@ header .topnav {
 .sec6 {
   margin: 0 auto;
   align-items: center;
-  padding: 0 12rem;
+  padding: 0 2rem; /* Reduced padding for smaller screens */
 }
 
 .sec6__content {
   align-items: center;
-  height: 40rem;
-  padding: 2rem;
+  padding: 1rem;
+  height: auto; /* Allow height to adjust to content */
 }
 
 .sec6__content h3 {
-  font-size: 6rem;
-  letter-spacing: 0.5rem;
+  font-size: 4rem; /* Slightly smaller on mobile */
+  letter-spacing: 0.3rem;
   font-weight: 500;
   text-align: center;
 }
 
 .sec6__content h5 {
-  padding-top: 3rem;
-  font-size: 4rem;
+  padding-top: 1rem;
+  font-size: 2.5rem; /* Reduced font size */
   font-weight: 800;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   text-align: center;
 }
 
 .sec6__content p {
-  font-size: 2rem;
+  font-size: 1.5rem; /* Smaller font size */
   text-align: center;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 .sec6__content .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
-  max-width: 100rem;
-  margin: 7rem auto;
+  grid-template-columns: 1fr; /* Single column on mobile */
+  max-width: 100%;
+  margin: 2rem auto;
   justify-content: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .sec6__content .grid-container .grid-item {
-  width: 40rem;
+  width: 100%; /* Full width on mobile */
+  max-width: 30rem; /* Maximum width to prevent overstretching */
+  margin: 0 auto; /* Center the grid items */
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .sec6 {
+    padding: 0 6rem;
+  }
+
+  .sec6__content .grid-container {
+    grid-template-columns: repeat(2, auto);
+    gap: 4rem;
+  }
+
+  .sec6__content .grid-container .grid-item {
+    width: 40rem;
+  }
+
+  .sec6__content h3 {
+    font-size: 6rem;
+  }
+
+  .sec6__content h5 {
+    font-size: 4rem;
+    padding-top: 3rem;
+  }
+
+  .sec6__content p {
+    font-size: 2rem;
+  }
 }
 
 .sec7 {
   margin: 0 auto;
   align-items: center;
-  padding: 0 12rem;
-}
-
-.sec7__content {
+  padding: 0 2rem; /* Reduced padding for mobile */
 }
 
 .sec7__content h3 {
-  padding-top: 3rem;
-  font-size: 4rem;
+  padding-top: 1.5rem;
+  font-size: 2.5rem; /* Smaller font for mobile */
   font-weight: 800;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   text-align: center;
 }
 
 .sec7__content .container {
   display: flex;
-  margin: 6rem auto;
+  flex-direction: column; /* Stack containers vertically on mobile */
+  margin: 2rem auto;
 }
 
 .sec7__content .container .reasons-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .sec7__content .container img {
-  width: 5.1rem;
+  width: 4rem; /* Slightly smaller image */
   max-width: 100%;
   height: auto;
 }
 
 .sec7__content .container .items-container {
   display: flex;
-  font-size: 1.8rem;
+  font-size: 1.5rem; /* Smaller font for mobile */
+  align-items: flex-start; /* Align items to top */
+}
+
+.sec7__content .container .items-container .check-img {
+  margin-top: 0.5rem; /* Adjust check mark positioning */
 }
 
 .sec7__content .container .items-container .details {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: 1.5rem 0 0 2rem;
+  gap: 1rem;
+  margin: 0 0 0 1.5rem;
 }
 
 .sec7__content .container .items-container .details .header {
   font-weight: 700;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+  .sec7 {
+    padding: 0 6rem;
+  }
+
+  .sec7__content h3 {
+    font-size: 4rem;
+    padding-top: 3rem;
+  }
+
+  .sec7__content .container {
+    flex-direction: row;
+    margin: 6rem auto;
+  }
+
+  .sec7__content .container .reasons-container {
+    width: 50%;
+    gap: 2rem;
+  }
+
+  .sec7__content .container img {
+    width: 5.1rem;
+  }
+
+  .sec7__content .container .items-container {
+    font-size: 1.8rem;
+  }
+
+  .sec7__content .container .items-container .details {
+    gap: 2rem;
+    margin: 1.5rem 0 0 2rem;
+  }
 }
 
 .sec8 {
